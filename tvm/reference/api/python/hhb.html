@@ -1,0 +1,738 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>hhb &mdash; tvm 0.10.dev1937+g06ee0318d documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/tlcpack_theme.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../../_static/tvm-logo-square.png"/>
+  
+
+  
+  
+  
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <script type="text/javascript" src="../../../_static/js/tlcpack_theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Other APIs" href="../links.html" />
+    <link rel="prev" title="vta" href="vta/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    
+<header class="header">
+    <div class="innercontainer">
+      <div class="headerInner d-flex justify-content-between align-items-center">
+          <div class="headerLogo">
+               <a href="https://tvm.apache.org/"><img src=https://tvm.apache.org/assets/images/logo.svg alt="logo"></a>
+          </div>
+
+          <div id="headMenu" class="headerNav">
+            <button type="button" id="closeHeadMenu" class="navCloseBtn"><img src="../../../_static/img/close-icon.svg" alt="Close"></button>
+             <ul class="nav">
+                <li class="nav-item">
+                   <a class="nav-link" href=https://tvm.apache.org/community>Community</a>
+                </li>
+                <li class="nav-item">
+                   <a class="nav-link" href=https://tvm.apache.org/download>Download</a>
+                </li>
+                <li class="nav-item">
+                   <a class="nav-link" href=https://tvm.apache.org/vta>VTA</a>
+                </li>
+                <li class="nav-item">
+                   <a class="nav-link" href=https://tvm.apache.org/blog>Blog</a>
+                </li>
+                <li class="nav-item">
+                   <a class="nav-link" href=https://tvm.apache.org/docs>Docs</a>
+                </li>
+                <li class="nav-item">
+                   <a class="nav-link" href=https://tvmconf.org>Conference</a>
+                </li>
+                <li class="nav-item">
+                   <a class="nav-link" href=https://github.com/apache/tvm/>Github</a>
+                </li>
+             </ul>
+               <div class="responsivetlcdropdown">
+                 <button type="button" class="btn-link">
+                   ASF
+                 </button>
+                 <ul>
+                     <li>
+                       <a href=https://apache.org/>Apache Homepage</a>
+                     </li>
+                     <li>
+                       <a href=https://www.apache.org/licenses/>License</a>
+                     </li>
+                     <li>
+                       <a href=https://www.apache.org/foundation/sponsorship.html>Sponsorship</a>
+                     </li>
+                     <li>
+                       <a href=https://www.apache.org/security/>Security</a>
+                     </li>
+                     <li>
+                       <a href=https://www.apache.org/foundation/thanks.html>Thanks</a>
+                     </li>
+                     <li>
+                       <a href=https://www.apache.org/events/current-event>Events</a>
+                     </li>
+                 </ul>
+               </div>
+          </div>
+            <div class="responsiveMenuIcon">
+              <button type="button" id="menuBtn" class="btn-menu"><img src="../../../_static/img/menu-icon.svg" alt="Menu Icon"></button>
+            </div>
+
+            <div class="tlcDropdown">
+              <div class="dropdown">
+                <button type="button" class="btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  ASF
+                </button>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <ul>
+                     <li>
+                       <a href=https://apache.org/>Apache Homepage</a>
+                     </li>
+                     <li>
+                       <a href=https://www.apache.org/licenses/>License</a>
+                     </li>
+                     <li>
+                       <a href=https://www.apache.org/foundation/sponsorship.html>Sponsorship</a>
+                     </li>
+                     <li>
+                       <a href=https://www.apache.org/security/>Security</a>
+                     </li>
+                     <li>
+                       <a href=https://www.apache.org/foundation/thanks.html>Thanks</a>
+                     </li>
+                     <li>
+                       <a href=https://www.apache.org/events/current-event>Events</a>
+                     </li>
+                  </ul>
+                </div>
+              </div>
+          </div>
+       </div>
+    </div>
+ </header>
+ 
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side fixed">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html">
+          
+
+          
+            
+            <img src="../../../_static/tvm-logo-small.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+                <div class="version">
+                  0.10.dev1937+g06ee0318d
+                </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../install/index.html">Installing TVM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../contribute/index.html">Contributor Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorial/index.html">User Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../how_to/index.html">How To Guides</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developer Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev/tutorial/index.html">Developer Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev/how_to/how_to.html">Developer How-To Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Architecture  Guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../arch/index.html">Design and Architecture</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Topic Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../topic/microtvm/index.html">microTVM: TVM on bare-metal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../topic/vta/index.html">VTA: Versatile Tensor Accelerator</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference Guide</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../langref/index.html">Language Reference</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Python API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="runtime.html">tvm.runtime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ndarray.html">tvm.runtime.ndarray</a></li>
+<li class="toctree-l2"><a class="reference internal" href="error.html">tvm.error</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ir.html">tvm.ir</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ir.html#module-tvm.instrument">tvm.instrument</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ir.html#module-tvm.transform">tvm.transform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="target.html">tvm.target</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tir.html">tvm.tir</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tir.html#module-tvm.tir.transform">tvm.tir.transform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tir.html#tvm-tir-analysis">tvm.tir.analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tir.html#module-tvm.tir.stmt_functor">tvm.tir.stmt_functor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="te.html">tvm.te</a></li>
+<li class="toctree-l2"><a class="reference internal" href="te.html#module-tvm.te.hybrid">tvm.te.hybrid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="driver.html">tvm.driver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relay/index.html">tvm.relay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relay/frontend.html">tvm.relay.frontend</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relay/nn.html">tvm.relay.nn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relay/vision.html">tvm.relay.vision</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relay/image.html">tvm.relay.image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relay/transform.html">tvm.relay.transform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relay/analysis.html">tvm.relay.analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relay/backend.html">tvm.relay.backend</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relay/dataflow_pattern.html">tvm.relay.dataflow_pattern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="relay/testing.html">tvm.relay.testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="autotvm.html">tvm.autotvm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto_scheduler.html">tvm.auto_scheduler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rpc.html">tvm.rpc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="micro.html">tvm.micro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contrib.html">tvm.contrib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="graph_executor.html">tvm.contrib.graph_executor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="topi.html">tvm.topi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vta/index.html">vta</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">hhb</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../links.html">Other APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../publications.html">Publications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../genindex.html">Index</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      
+      <nav class="wy-nav-top" aria-label="top navigation" data-toggle="wy-nav-top">
+        
+            <div class="togglemenu">
+
+            </div>
+            <div class="nav-content">
+              <!-- tvm -->
+              Table of content
+            </div>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> <span class="br-arrow">></span></li>
+        
+          <li><a href="index.html">Python API</a> <span class="br-arrow">></span></li>
+        
+      <li>hhb</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/reference/api/python/hhb.rst.txt" rel="nofollow"> <img src="../../../_static//img/source.svg" alt="viewsource"/></a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-hhb">
+<span id="hhb"></span><h1>hhb<a class="headerlink" href="#module-hhb" title="Permalink to this headline">¶</a></h1>
+<p><strong>Classes:</strong></p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hhb.Compiler" title="hhb.Compiler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Compiler</span></code></a>([board])</p></td>
+<td><p>Object for compiling original DL models into specific format.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hhb.Profiler" title="hhb.Profiler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Profiler</span></code></a>(compile_obj)</p></td>
+<td><p>Collections of profiler tools for HHB.</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Functions:</strong></p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hhb.generate_hhb_default_config" title="hhb.generate_hhb_default_config"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generate_hhb_default_config</span></code></a>([path, ...])</p></td>
+<td><p>Generate defualt config.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hhb.convert_invalid_symbol" title="hhb.convert_invalid_symbol"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert_invalid_symbol</span></code></a>(input_str)</p></td>
+<td><p>Convert invalid symbols in string into '_'</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hhb.print_top5" title="hhb.print_top5"><code class="xref py py-obj docutils literal notranslate"><span class="pre">print_top5</span></code></a>(value[, output_name, shape])</p></td>
+<td><p>Print the top5 infomation</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hhb.set_debug_level" title="hhb.set_debug_level"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_debug_level</span></code></a>([level])</p></td>
+<td><p>Set debug level.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py class">
+<dt class="sig sig-object py" id="hhb.Compiler">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">hhb.</span></span><span class="sig-name descname"><span class="pre">Compiler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">board</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'unset'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hhb.Compiler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Object for compiling original DL models into specific format.</p>
+<p><strong>Methods:</strong></p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hhb.Compiler.create_relay_ir" title="hhb.Compiler.create_relay_ir"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_relay_ir</span></code></a>()</p></td>
+<td><p>Create empty HHBRelayIR object</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hhb.Compiler.create_qnn_ir" title="hhb.Compiler.create_qnn_ir"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_qnn_ir</span></code></a>()</p></td>
+<td><p>Create empty HHBQNNIR object</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hhb.Compiler.preprocess" title="hhb.Compiler.preprocess"><code class="xref py py-obj docutils literal notranslate"><span class="pre">preprocess</span></code></a>(data_path[, is_generator])</p></td>
+<td><p>Preprocess data with provided data files.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hhb.Compiler.import_model" title="hhb.Compiler.import_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">import_model</span></code></a>(path[, model_format, ...])</p></td>
+<td><p>Import a model from a supported framework into relay ir.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hhb.Compiler.quantize" title="hhb.Compiler.quantize"><code class="xref py py-obj docutils literal notranslate"><span class="pre">quantize</span></code></a>([calibrate_data, save_to_dir])</p></td>
+<td><p>Quantize model and convert relay ir into qnn ir.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hhb.Compiler.codegen" title="hhb.Compiler.codegen"><code class="xref py py-obj docutils literal notranslate"><span class="pre">codegen</span></code></a>([hhb_ir])</p></td>
+<td><p>Codegen hhb model.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hhb.Compiler.create_executor" title="hhb.Compiler.create_executor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_executor</span></code></a>()</p></td>
+<td><p>Wrapper for hhb runner.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hhb.Compiler.inference" title="hhb.Compiler.inference"><code class="xref py py-obj docutils literal notranslate"><span class="pre">inference</span></code></a>(data)</p></td>
+<td><p>Inference for hhb model on x86 platform.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hhb.Compiler.deploy" title="hhb.Compiler.deploy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">deploy</span></code></a>()</p></td>
+<td><p>Cross-compile codegen output for specified target.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hhb.Compiler.reorder_pixel_format" title="hhb.Compiler.reorder_pixel_format"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reorder_pixel_format</span></code></a>()</p></td>
+<td><p>If original model's input data pixel format is rgb, then covert it to bgr, otherwise, then convert it to rgb.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hhb.Compiler.insert_preprocess_node" title="hhb.Compiler.insert_preprocess_node"><code class="xref py py-obj docutils literal notranslate"><span class="pre">insert_preprocess_node</span></code></a>()</p></td>
+<td><p>Insert preprocess nodes into the head of model.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="hhb.Compiler.create_relay_ir">
+<span class="sig-name descname"><span class="pre">create_relay_ir</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hhb.Compiler.create_relay_ir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create empty HHBRelayIR object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hhb.Compiler.create_qnn_ir">
+<span class="sig-name descname"><span class="pre">create_qnn_ir</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hhb.Compiler.create_qnn_ir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create empty HHBQNNIR object</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hhb.Compiler.preprocess">
+<span class="sig-name descname"><span class="pre">preprocess</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">is_generator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hhb.Compiler.preprocess" title="Permalink to this definition">¶</a></dt>
+<dd><p>Preprocess data with provided data files.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_path</strong> (<em>str</em>) – Data file path.</p></li>
+<li><p><strong>is_generator</strong> (<em>bool</em><em>, </em><em>optional</em>) – return generator for data if set.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>out</strong> – Processed data.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list[dict[name, numpy.ndarray]] or generator</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hhb.Compiler.import_model">
+<span class="sig-name descname"><span class="pre">import_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_format</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_shape</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_to_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hhb.Compiler.import_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Import a model from a supported framework into relay ir.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<em>str</em><em> or </em><em>list</em><em>[</em><em>str</em><em>]</em>) – Path to a model file. There may be two files(.caffemodel, .prototxt) for Caffe model</p></li>
+<li><p><strong>model_format</strong> (<em>str</em><em>, </em><em>optional</em>) – A string representing input model format</p></li>
+<li><p><strong>input_name</strong> (<em>list</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – The names of input node in the graph</p></li>
+<li><p><strong>input_shape</strong> (<em>list</em><em>[</em><em>list</em><em>[</em><em>int</em><em>]</em><em>]</em><em>, </em><em>optional</em>) – The shape of input node in the graph</p></li>
+<li><p><strong>output_name</strong> (<em>list</em><em>[</em><em>str</em><em>]</em><em>, </em><em>optional</em>) – The name of output node in the graph</p></li>
+<li><p><strong>save_to_dir</strong> (<em>str</em><em>, </em><em>optional</em>) – save model into specified directory</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hhb.Compiler.quantize">
+<span class="sig-name descname"><span class="pre">quantize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">calibrate_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">save_to_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hhb.Compiler.quantize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Quantize model and convert relay ir into qnn ir.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>calibrate_data</strong> (<a class="reference internal" href="relay/dataflow_pattern.html#tvm.relay.dataflow_pattern.List" title="tvm.relay.dataflow_pattern.List"><em>List</em></a><em>[</em><a class="reference internal" href="relay/dataflow_pattern.html#tvm.relay.dataflow_pattern.Dict" title="tvm.relay.dataflow_pattern.Dict"><em>Dict</em></a><em>[</em><em>str</em><em>, </em><em>numpy.ndarray</em><em>]</em><em>]</em>) – The calibration data for quantization. It includes batches of data.</p></li>
+<li><p><strong>save_to_dir</strong> (<em>str</em><em>, </em><em>optional</em>) – save model into specified directory</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hhb.Compiler.codegen">
+<span class="sig-name descname"><span class="pre">codegen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">hhb_ir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hhb.Compiler.codegen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Codegen hhb model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>hhb_ir</strong> (<em>HHBIRBase</em>) – HHB ir wrapper that holds module and params</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hhb.Compiler.create_executor">
+<span class="sig-name descname"><span class="pre">create_executor</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hhb.Compiler.create_executor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper for hhb runner.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hhb.Compiler.inference">
+<span class="sig-name descname"><span class="pre">inference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hhb.Compiler.inference" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inference for hhb model on x86 platform.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data</strong> (<a class="reference internal" href="relay/dataflow_pattern.html#tvm.relay.dataflow_pattern.Dict" title="tvm.relay.dataflow_pattern.Dict"><em>Dict</em></a><em>[</em><em>str</em><em>, </em><em>numpy.ndarray</em><em>]</em>) – The input data</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>output</strong> – The output data.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="relay/dataflow_pattern.html#tvm.relay.dataflow_pattern.List" title="tvm.relay.dataflow_pattern.List">List</a>[numpy.ndarray]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hhb.Compiler.deploy">
+<span class="sig-name descname"><span class="pre">deploy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hhb.Compiler.deploy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cross-compile codegen output for specified target.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hhb.Compiler.reorder_pixel_format">
+<span class="sig-name descname"><span class="pre">reorder_pixel_format</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hhb.Compiler.reorder_pixel_format" title="Permalink to this definition">¶</a></dt>
+<dd><p>If original model’s input data pixel format is rgb, then covert it to bgr,
+otherwise, then convert it to rgb.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hhb.Compiler.insert_preprocess_node">
+<span class="sig-name descname"><span class="pre">insert_preprocess_node</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#hhb.Compiler.insert_preprocess_node" title="Permalink to this definition">¶</a></dt>
+<dd><p>Insert preprocess nodes into the head of model.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="hhb.Profiler">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">hhb.</span></span><span class="sig-name descname"><span class="pre">Profiler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">compile_obj</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference internal" href="#hhb.Compiler" title="hhb.main.Compiler"><span class="pre">hhb.main.Compiler</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hhb.Profiler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Collections of profiler tools for HHB.</p>
+<p><strong>Methods:</strong></p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hhb.Profiler.get_cal_total" title="hhb.Profiler.get_cal_total"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_cal_total</span></code></a>(data)</p></td>
+<td><p>Statistics of all calculations of macc and flops</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#hhb.Profiler.get_mem_total_byte" title="hhb.Profiler.get_mem_total_byte"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_mem_total_byte</span></code></a>(data)</p></td>
+<td><p>Statistics of all memory requirement of params and output of all ops.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#hhb.Profiler.analyse_model" title="hhb.Profiler.analyse_model"><code class="xref py py-obj docutils literal notranslate"><span class="pre">analyse_model</span></code></a>([model_type, indicator, tofile])</p></td>
+<td><p>Analyse model with specified indicator.</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py method">
+<dt class="sig sig-object py" id="hhb.Profiler.get_cal_total">
+<span class="sig-name descname"><span class="pre">get_cal_total</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hhb.Profiler.get_cal_total" title="Permalink to this definition">¶</a></dt>
+<dd><p>Statistics of all calculations of macc and flops</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hhb.Profiler.get_mem_total_byte">
+<span class="sig-name descname"><span class="pre">get_mem_total_byte</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hhb.Profiler.get_mem_total_byte" title="Permalink to this definition">¶</a></dt>
+<dd><p>Statistics of all memory requirement of params and output of all ops.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="hhb.Profiler.analyse_model">
+<span class="sig-name descname"><span class="pre">analyse_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'relay'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indicator</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'all'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tofile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hhb.Profiler.analyse_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Analyse model with specified indicator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_type</strong> (<em>str</em>) – Model type, selected from [“relay”, ]</p></li>
+<li><p><strong>indicator</strong> (<em>str</em><em> or </em><em>list</em><em>[</em><em>str</em><em>]</em>) – Specified indicator data that will be extracted from model, selected from
+[“cal”, “mem”, “all”]</p></li>
+<li><p><strong>tofile</strong> (<em>str</em>) – Save result data into file, support for .aitrace and .json format.
+.aitrace: binary format for result data that defiled by HHB;
+.json: JSON format.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>result</strong> – Result data</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list[dict[str, dict[str, object]]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hhb.generate_hhb_default_config">
+<span class="sig-prename descclassname"><span class="pre">hhb.</span></span><span class="sig-name descname"><span class="pre">generate_hhb_default_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'hhb_config_default.json'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">specified_groups</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">with_hidden</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hhb.generate_hhb_default_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate defualt config.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<em>str</em>) – The path of file that holds default config.</p></li>
+<li><p><strong>specified_groups</strong> (<em>list</em><em> or </em><em>tuple</em>) – <p>Arguments in sepcified_groups are generated. Group name can be selected from
+[“common”, “preprocess”, “import”, “optimize”, “quantize”, “hardware”,</p>
+<blockquote>
+<div><p>”simulate”, “postprocess”, “main”, “codegen”, “profiler”]</p>
+</div></blockquote>
+</p></li>
+<li><p><strong>with_hidden</strong> (<em>bool</em>) – If it is true, more arguments will be generated in the config file.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hhb.convert_invalid_symbol">
+<span class="sig-prename descclassname"><span class="pre">hhb.</span></span><span class="sig-name descname"><span class="pre">convert_invalid_symbol</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hhb.convert_invalid_symbol" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert invalid symbols in string into ‘_’</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>input_str</strong> (<em>str</em>) – Input string</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><strong>new_str</strong> – Modified string.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hhb.print_top5">
+<span class="sig-prename descclassname"><span class="pre">hhb.</span></span><span class="sig-name descname"><span class="pre">print_top5</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shape</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hhb.print_top5" title="Permalink to this definition">¶</a></dt>
+<dd><p>Print the top5 infomation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<em>numpy.ndarray</em>) – The data need to be print.</p></li>
+<li><p><strong>output_name</strong> (<em>str</em>) – The name of value.</p></li>
+<li><p><strong>shape</strong> (<a class="reference internal" href="relay/dataflow_pattern.html#tvm.relay.dataflow_pattern.List" title="tvm.relay.dataflow_pattern.List"><em>List</em></a><em>[</em><em>int</em><em>]</em>) – The original shape of value.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="hhb.set_debug_level">
+<span class="sig-prename descclassname"><span class="pre">hhb.</span></span><span class="sig-name descname"><span class="pre">set_debug_level</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'LOG'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#hhb.set_debug_level" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set debug level.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>level</strong> (<em>str</em>) – The debug level string, select from: LOG, DEBUG, INFO, WARNING and ERROR.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          
+
+<footer>
+
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../links.html" class="btn btn-neutral float-right" title="Other APIs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="vta/index.html" class="btn btn-neutral float-left" title="vta" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+
+<div id="button" class="backtop"><img src="../../../_static//img/right.svg" alt="backtop"/> </div>
+<section class="footerSec">
+    <div class="footerHeader">
+      <ul class="d-flex align-md-items-center justify-content-between flex-column flex-md-row">
+        <li class="copywrite d-flex align-items-center">
+          <h5 id="copy-right-info">© 2022 Apache Software Foundation | All rights reserved</h5>
+        </li>
+      </ul>
+
+    </div>
+
+    <ul>
+      <li class="footernote">Copyright © 2022 The Apache Software Foundation. Apache TVM, Apache, the Apache feather, and the Apache TVM project logo are either trademarks or registered trademarks of the Apache Software Foundation.</li>
+    </ul>
+
+</section>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  </body>
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-75982049-2', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>
